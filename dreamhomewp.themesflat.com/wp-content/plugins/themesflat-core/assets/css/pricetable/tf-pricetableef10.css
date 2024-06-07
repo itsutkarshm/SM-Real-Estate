@@ -1,0 +1,193 @@
+.tf-pricetable,
+.tf-pricetable .header-price,
+.tf-pricetable .price-type,
+.tf-pricetable .price,
+.tf-pricetable .title,
+.tf-pricetable .number-order,
+.tf-pricetable .wrap-icon svg,
+.tf-pricetable .wrap-icon i,
+.tf-pricetable .text,
+.tf-pricetable .time,
+.tf-pricetable .subtitle {
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.tf-pricetable {
+  border: 1px solid #efefef;
+  border-radius: 10px;
+  background: #FFF;
+  padding: 30px;
+}
+
+.tf-pricetable:hover {
+  transform: translateY(-5px);
+}
+
+.tf-pricetable .content-price {
+  font-size: 45px;
+  font-weight: 700;
+  line-height: 1.2em;
+  color: #1C1C1E;
+  display: inline-flex;
+  align-items: end;
+  margin-bottom: 15px;
+}
+
+.tf-pricetable .content-price .time {
+  color: #8E8E93;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.5em;
+  margin-left: 15px;
+  margin-bottom: -5px;
+}
+
+.tf-pricetable .title {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.5em;
+  margin-bottom: 1px;
+}
+
+.tf-pricetable .subtitle2 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 150%;
+  margin-bottom: 31px;
+}
+
+.tf-pricetable .subtitle {
+  color: #8E8E93;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 150%;
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #EFEFEF;
+}
+
+.tf-pricetable .text {
+  color: #3A3A3C;
+  font-family: 'Mulish';
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.tf-pricetable .wrap-icon {
+  width: 17px;
+  height: 17px;
+  font-size: 9px;
+  border-radius: 50%;
+  background: var(--theme-primary-color);
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  margin-right: 11px;
+  flex-shrink: 0;
+}
+
+.tf-pricetable .inner-content-list {
+  margin-bottom: 22px;
+}
+
+.tf-pricetable .inner-content-list .item {
+  display: flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  align-items: center;
+  margin-bottom: 14.2px;
+}
+
+.tf-pricetable .inner-content-list .item:last-child {
+  margin-bottom: 0;
+}
+
+.tf-pricetable .wrap-button .tf-btn {
+  border-radius: 8px;
+  background: var(--theme-primary-rgba);
+  padding: 15px 20px;
+  color: #1C1C1E;
+  width: 100%;
+  border: 1px solid transparent;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 150%;
+}
+
+.tf-pricetable .wrap-button .tf-btn:hover {
+  border: 1px solid var(--theme-primary-color);
+  color: #fff;
+  background: var(--theme-primary-color);
+}
+
+.tf-pricetable.setactive {
+  border-color: var(--theme-primary-color);
+  background: var(--theme-primary-color);
+}
+
+.tf-pricetable.setactive .content-price,
+.tf-pricetable.setactive .content-price .time,
+.tf-pricetable.setactive .title,
+.tf-pricetable.setactive .subtitle2,
+.tf-pricetable.setactive .subtitle,
+.tf-pricetable.setactive .text {
+  color: #fff;
+}
+
+.tf-pricetable.setactive .tf-btn,
+.tf-pricetable.setactive .wrap-icon {
+  background: #fff;
+  color: var(--theme-primary-color);
+}
+
+.tf-pricetable.setactive .tf-btn:hover {
+  background: #1C1C1E;
+  color: #fff;
+}
+
+@media only screen and (max-width: 1200px) {
+  .tf-pricetable .text {
+    text-align: left;
+}
+.tf-pricetable .inner-content-list {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.tf-pricetable .content-price {
+  font-size: 35px;
+}
+.tf-pricetable.style2 .badge-table {
+  top: 10px;
+  right: 10px;
+}
+}
+
+@media only screen and (max-width: 991px) {
+  .tf-pricetable.style2,
+  .tf-pricetable {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .tf-pricetable.style2 .content-price {
+    font-size: 40px;
+}
+.tf-pricetable.style2 .wrap-icon {
+  margin-right: 10px;
+}
+}
+
+@media only screen and (max-width: 767px) {
+  .tf-pricetable.style2,
+   .tf-pricetable {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+}

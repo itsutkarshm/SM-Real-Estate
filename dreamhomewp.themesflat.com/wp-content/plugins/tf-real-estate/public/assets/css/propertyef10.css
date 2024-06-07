@@ -1,0 +1,660 @@
+.form-control.error,
+.form-control.error:active,
+.form-control.error:focus,
+.select2-container--default.error .select2-selection,
+.form-check-input.is-invalid,
+.was-validated .form-check-input:invalid {
+    border: 1px solid #dc3545 !important;
+}
+
+.is-invalid label {
+    color: #a94442;
+}
+
+.star.active {
+    color: gold;
+}
+
+.disabled-click {
+    pointer-events: none;
+}
+
+.features-list .checkbox label input[type="checkbox"] {
+    margin-right: 7px;
+}
+
+.tfre-light-gallery:hover a.zoomGallery {
+    opacity: 1;
+}
+
+.tfre-light-gallery a.zoomGallery {
+    position: absolute;
+    top: 15px;
+    bottom: 0;
+    left: 15px;
+    right: 0;
+    opacity: 0;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+    cursor: pointer;
+}
+
+.tfre-light-gallery {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+/* properties box */
+
+.tfre-property-card .list-controller .tfre-compare-property.active,
+.tfre-property-card .list-controller .tfre-property-favorite.active,
+.tfre-property-card .list-controller .property-quick-view:hover,
+.tfre-property-card .list-controller .tfre-compare-property:hover
+.tfre-property-card .list-controller .tfre-property-favorite:hover {
+    background: var(--theme-primary-color) !important;
+}
+
+.tfre-property-card .list-controller .property-quick-view img {
+    width: 20px !important;
+    height: 20px !important;
+    transform: unset !important;
+    border-radius: unset !important;
+    background: unset !important;
+}
+
+.tfre-property-card .list-controller .tfre-compare-property,
+.tfre-property-card .list-controller .tfre-property-favorite,
+.tfre-property-card .list-controller .property-quick-view {
+    width: 36px;
+    height: 36px;
+    background: #0000009c;
+    color: #fff;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.tfre-property-card .property-inner .card-image .list-text {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    z-index: 5;
+}
+
+.tfre-property-card .property-inner .card-image .list-text li span {
+    padding: 1px 6px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 4px;
+}
+
+.tfre-property-card .property-inner .card-image .list-text li span.featured-text {
+    background: var(--theme-primary-color);
+}
+
+.tfre-property-card .property-inner .card-image .list-text li span.sale-text {
+    background: #6E55FF;
+}
+
+.list-controller li a:hover {
+    background: var(--theme-primary-color) !important;
+}
+
+.tfre-property-card .list-controller li:not(:last-child) {
+    margin-right: 6px;
+}
+
+.tfre-property-card .bottom-infor-features .list-controller {
+    display: flex;
+    align-items: center;
+}
+
+.tfre-property-card .bottom-infor-features {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    left: 10px;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tfre-property-card .bottom-infor-features .compare i.fa-plus::before {
+    content: '\e925';
+    font-family: 'dreamhome';
+    font-weight: 400;
+}
+
+.tfre-property-card .bottom-infor-features .tfre-property-price {
+    color: #FFF;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.description .property-information img,
+.description .property-information i {
+    width: 18px !important;
+    height: 20px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.tfre-property-card .bottom-infor-features .tfre-property-price .tfre-prop-price-postfix {
+    color: rgba(255, 255, 255, 0.50);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.cards-container .tf-properties-wrap.style5 .properties-post .featured-property .bottom-infor-features {
+    position: unset;
+    bottom: unset;
+    right: unset;
+    left: unset;
+    z-index: 5;
+    display: unset;
+}
+
+.cards-container .tf-properties-wrap.style5 .properties-post {
+    flex-direction: unset;
+}
+
+.cards-container .tf-properties-wrap.style5 .properties-post .bottom {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 15px;
+    row-gap: 5px;
+    justify-content: space-between;
+}
+
+.cards-container .tf-properties-wrap.style2 .wrap-properties-post .item .properties-post .content {
+    gap: 10px;
+}
+
+.cards-container .tf-properties-wrap.style2 .wrap-properties-post .item .properties-post .content .heading {
+    gap: 0px;
+}
+
+.cards-container .tf-properties-wrap.style1 .wrap-properties-post .item .properties-post .content {
+    margin-bottom: 10px;
+}
+
+.cards-container .tf-properties-wrap.style1 .wrap-properties-post .item .properties-post .bottom {
+    margin-top: 0px;
+}
+
+.cards-container .tf-properties-wrap.style3 .properties-post .featured-property .bottom-infor-features {
+    position: unset;
+    bottom: unset;
+    right: unset;
+    left: unset;
+}
+
+.cards-container .tf-properties-wrap.style4 .content .bottom,
+.cards-container .tf-properties-wrap.style4 .content .line,
+.cards-container .tf-properties-wrap.style4 .properties-post .price {
+    display: none;
+}
+
+.cards-container .tf-properties-wrap.style4  .featured-property .bottom-infor-features {
+    position: unset;
+    bottom: unset;
+    right: unset;
+    left: unset;
+    display: block;
+}
+
+.cards-container .tf-properties-wrap.style2 .wrap-properties-post .item .properties-post .bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 15px;
+    row-gap: 10px;
+}
+
+.tf-properties-wrap.style2 .wrap-properties-post .item .properties-post .featured-property img,
+.tf-properties-wrap.style5 .wrap-properties-post .item .properties-post .featured-property img,
+.tf-properties-wrap.style2 .wrap-properties-post .item .properties-post .featured-property .view-gallery,
+.tf-properties-wrap.style2 .wrap-properties-post .item .properties-post .featured-property .carousel-image-box,
+.tf-properties-wrap.style5 .wrap-properties-post .item .properties-post .featured-property .view-gallery,
+.tf-properties-wrap.style5 .wrap-properties-post .item .properties-post .featured-property .carousel-image-box {
+    height: 100% !important;
+}
+
+.tf-properties-wrap.style2 .wrap-properties-post .item .properties-post .featured-property,
+.tf-properties-wrap.style5 .wrap-properties-post .item .properties-post .featured-property {
+    height: unset !important;
+}
+
+.tfre-property-card .property-inner .description {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 16px;
+    align-self: stretch;
+    justify-content: space-between;
+}
+
+.tfre-property-card .property-inner .card-bottom .avatar span {
+    margin: 0;
+    color: #8E8E93;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 150%;
+    margin-left: 8px;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -ms-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+
+/* btn popup */
+
+.mfp-arrow {
+    width: 70px !important;
+    height: 70px !important;
+}
+
+.mfp-arrow:after {
+    top: -13px !important;
+}
+
+.mfp-arrow::before {
+    display: none !important;
+}
+
+.mfp-arrow-right:after {
+    margin-left: 32px !important;
+}
+
+.mfp-arrow-left:after {
+    margin-left: 20px !important;
+}
+
+/* Properties List Map */
+.cards-container.half-map-left.row {
+    flex-direction: row-reverse;
+}
+
+.properties-list-wrap .tfre-my-property-search .toolbar-search-list {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.properties-list-wrap .tfre-my-property-search .toolbar-search-list a.btn-display-properties-grid,
+.properties-list-wrap .tfre-my-property-search .toolbar-search-list a.btn-display-properties-list {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 10px;
+    border: 1px solid var(--input, #E5E5EA);
+    background: #FFF;
+    color: #8E8E93;
+}
+
+.properties-list-wrap .tfre-my-property-search .toolbar-search-list a.btn-display-properties-grid.active,
+.properties-list-wrap .tfre-my-property-search .toolbar-search-list a.btn-display-properties-list.active {
+    background: var(--theme-primary-color);
+    border-color: var(--theme-primary-color);
+}
+
+.properties-list-wrap .tfre-my-property-search .toolbar-search-list a.btn-display-properties-grid.active i,
+.properties-list-wrap .tfre-my-property-search .toolbar-search-list a.btn-display-properties-list.active i {
+    color: #fff;
+}
+
+/* End Properties List Map */
+
+/* Properties List Has Sidebar */
+.has-sidebar .properties-list-wrap {
+    align-content: flex-start;
+}
+
+.has-sidebar.sidebar-left .properties-list-wrap {
+    order: 1;
+}
+
+/* End Properties List Has Sidebar */
+
+/* Save Property Form */
+#sortable {
+    overflow-x: hidden;
+}
+
+#sortable #tfre_property_gallery_container .sortable_item {
+    display: block;
+    float: left;
+    height: 100%;
+    width: 200px;
+    box-sizing: border-box;
+}
+
+#sortable #tfre_property_gallery_container .sortable_item:hover{
+    cursor: move;
+}
+/* End Save Property Form */
+
+/* Single Property */
+#tabs-header-single-property .tabs-nav{
+    position: absolute;
+    top: 5px;
+    right: 100px;
+    z-index: 10;
+}
+#tabs-header-single-property .tabs-nav .ui-state-default{
+    border-radius: 5px;
+    border: 1px solid #efefef;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -ms-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+
+#tabs-header-single-property .ui-tabs-nav li.ui-tabs-active {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+#tabs-header-single-property .tabs-nav .ui-state-default a{
+    color: var(--text-body-text);
+}
+
+#tabs-header-single-property .tabs-nav .ui-state-active, #tabs-header-single-property .tabs-nav .ui-state-hover{
+    border: 1px solid var(--theme-primary-color);
+    color: var(--theme-primary-color);
+    border-radius: 5px;
+}
+
+#tabs-header-single-property .tabs-nav .ui-state-hover a{
+    color: var(--theme-primary-color);
+}
+
+#tabs-header-single-property .tabs-nav .ui-state-active a{
+    color: var(--theme-primary-color);
+}
+
+.property-description .tfre-property-info .more-property-description {
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.hv-tool{
+    position: relative;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -ms-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+
+.hv-tool::before {
+    --translate-y: calc(-100% - var(--arrow-size));
+    content: attr(data-tooltip);
+    color: #120A21;
+    padding: 6px 11px;
+    background: #fff;
+    box-shadow: 0px 4px 26px 0px rgba(66, 71, 76, 0.1215686275);
+    width: max-content;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.hv-tool::after {
+    --translate-y: calc(-1.1 * var(--arrow-size));
+    content: "";
+    border: 6px solid transparent;
+    border-top-color: #fff;
+}
+
+.hv-tool::after,
+.hv-tool::before {
+    opacity: 0;
+    visibility: hidden;
+    --arrow-size: 6px;
+    position: absolute;
+    top: 0px;
+    left: 45%;
+    transform: translateX(-50%) translateY(var(--translate-y, 0));
+    -webkit-transition: all 0.2s ease 0s;
+    -moz-transition: all 0.2s ease 0s;
+    -ms-transition: all 0.2s ease 0s;
+    -o-transition: all 0.2s ease 0s;
+    transition: all 0.2s ease 0s;
+}
+
+ .hv-tool:hover::before,
+.hv-tool:hover::after {
+    opacity: 1;
+    top: -6px;
+    visibility: visible;
+}
+
+ .hv-tool:hover {
+    z-index: 2;
+}
+
+/* Navigation Single Property */
+
+.property-navigation {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+    box-sizing: border-box;
+    background-color: #fff;
+    margin-bottom: 30px;
+    box-shadow: 0px 4px 18px 0px rgba(0, 0, 0, 0.08);
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -ms-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+
+.property-navigation.is-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0px 3px 6px rgb(0, 0, 0, 2%);
+}
+
+.property-navigation-item {
+    position: relative;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    max-width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 10px 0;
+}
+
+.property-navigation-item .navigation-item {
+    display: flex;
+    box-sizing: border-box;
+    overflow: scroll;
+}
+
+.property-navigation-item .navigation-item li {
+    flex-shrink: 0;
+    cursor: pointer;
+    min-width: 100px;
+    font-weight: 600;
+    font-size: 15px;
+    text-align: center;
+    padding: 3px 5px;
+}
+
+.property-navigation-item .navigation-item li:not(:last-child) {
+    margin-right: 15px;
+}
+
+.property-navigation-item li a {
+    position: relative;
+    text-transform: capitalize;
+}
+
+.property-navigation-item li a::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: var(--theme-primary-color);
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -ms-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+
+.property-navigation-item li:hover a::after,
+.property-navigation-item li.active a::after {
+    width: 100%;
+}
+
+.property-navigation-item .navigation-item li.active a {
+    color: var(--theme-primary-color);
+}
+
+.property-navigation-item .navigation-item::-webkit-scrollbar {
+    display: none;
+}
+
+/* End Single Property */
+
+/* Property Quick View Popup */
+.property_quick_view_modal .modal-content .modal-body .loading{
+    display: flex;
+    justify-content: center;
+}
+
+.property_quick_view_modal .modal-content .modal-body button.close{
+    position: absolute;
+    top: 13px;
+    right: 13px;
+    z-index: 5;
+    border: 0;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    background-color: var(--theme-primary-color);
+    color: #FFF;
+    -webkit-transition: all 0.2s ease 0s;
+    -moz-transition: all 0.2s ease 0s;
+    -ms-transition: all 0.2s ease 0s;
+    -o-transition: all 0.2s ease 0s;
+    transition: all 0.2s ease 0s;
+}
+
+.property_quick_view_modal .modal-content .modal-body button.close:hover {
+    background-color: #222;
+}
+
+.popup-property-container{
+    display: flex;
+}
+
+.popup-property-container .property-gallery{
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.popup-property-container .property-gallery .thumb-swiper .swiper-slide:not(.swiper-slide-thumb-active){
+    opacity: 0.5;
+}
+
+.popup-property-container .property-content{
+    flex: 1;
+    padding: 1rem;
+}
+
+.popup-property-container .property-content .property-title{
+    display: inline-block;
+}
+
+.popup-property-container .property-content .featured-text{
+    background: var(--theme-primary-color);
+    padding: 1px 6px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    position: relative;
+    border-radius: 4px;
+    top: -4px;
+}
+
+.popup-property-container .property-content .sale-text{
+    background: #6E55FF;
+    padding: 1px 6px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 4px;
+}
+
+.popup-property-container .property-content .tfre-property-price{
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--theme-primary-color);
+}
+
+.popup-property-container .property-content .entry-meta{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 10px 0;
+}
+
+.popup-property-container .property-content .description{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.popup-property-container .property-content .description .property-information {
+    border-top: 1px solid rgba(0,0,0,.125);
+    padding: 0.75rem 0;
+}
+
+@media screen and (max-width: 480px) {
+    .popup-property-container{
+       flex-direction: column;
+    }
+    
+    .popup-property-container .property-gallery{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+/* End Property Quick View Popup */

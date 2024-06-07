@@ -1,0 +1,129 @@
+/*title section
+---------------------------------------------------------------- */
+.tf-title-section .title-section .sub-title {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 2.8px;
+    text-transform: uppercase;
+    color: var(--theme-primary-color);
+    margin-bottom: 16px;
+    display: inline-block;
+}
+
+.tf-title-section .title-section .heading {
+    font-size: 45px;
+    line-height: 1.2em;
+    color: #1C1C1E;
+    text-transform: capitalize;
+}
+
+.tf-title-section .title-section .description {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    margin-top: 14px;
+}
+
+.tf-title-section.style2 .title-section {
+    display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    align-items: center;
+}
+
+.tf-title-section.style2 .title-section .content-left,
+.tf-title-section.style2 .title-section .content-right {
+    width: 50%;
+}
+
+.tf-title-section .divider-line {
+    width: 100px;
+    height: 2px;
+    background: var(--theme-primary-color);
+    display: inline-flex;
+    margin-bottom: 2px;
+}
+
+
+@media (max-width: 767px) {
+    .tf-title-section .title-section .heading {
+        font-size: 35px;
+    }
+    .tf-title-section.style2 .title-section {
+        display: block;
+    }
+    .tf-title-section.style2 .title-section .content-left,
+.tf-title-section.style2 .title-section .content-right {
+    width: 100%;
+}
+}
+
+.splitting .word,
+.splitting .char {
+  display: inline-block;
+}
+.splitting .char {
+  position: relative;
+}
+
+.splitting .char::before,
+.splitting .char::after {
+  content: attr(data-char);
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  transition: inherit;
+  user-select: none;
+}
+.splitting {
+  --word-center: calc((var(--word-total) - 1) / 2);
+  --char-center: calc((var(--char-total) - 1) / 2);
+  --line-center: calc((var(--line-total) - 1) / 2);
+}
+
+.splitting .word {
+  --word-percent: calc(var(--word-index) / var(--word-total));
+  --line-percent: calc(var(--line-index) / var(--line-total));
+}
+
+.splitting .char {
+  --char-percent: calc(var(--char-index) / var(--char-total));
+  --char-offset: calc(var(--char-index) - var(--char-center));
+  --distance: calc(
+     (var(--char-offset) * var(--char-offset)) / var(--char-center)
+  );
+  --distance-sine: calc(var(--char-offset) / var(--char-center));
+  --distance-percent: calc((var(--distance) / var(--char-center)));
+}
+
+.splitting.tf-animated .char {
+    animation-fill-mode: both;
+    animation-duration: 1000ms;
+    animation-delay: calc(200ms + calc(15ms * var(--char-index)));
+}
+
+.splitting.tf-animated .char {
+    animation-name: uicoreFadeInUp, uicoreFadeIn!important;
+    animation-timing-function: cubic-bezier(.22,1,.36,1),cubic-bezier(0,0,.2,1);
+}
+
+@keyframes uicoreFadeInUp {
+    0% {
+        transform: translate3d(0,40px,0);
+    }
+    100% {
+        transform: translateZ(0);
+    }
+}
+
+@keyframes uicoreFadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

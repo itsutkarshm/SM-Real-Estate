@@ -1,0 +1,381 @@
+.agent-tabs {
+    display: flex;
+    flex-direction: column;
+}
+
+.agent-tab-titles {
+    display: flex;
+    border-bottom: 1px solid #EFEFEF;
+    margin-bottom: 30px;
+}
+
+.agent-tab-title {
+    padding: 10px;
+    margin: 2px;
+    cursor: pointer;
+    color: #1C1C1E;
+    font-size: 18px;
+    font-weight: 600;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    padding: 0;
+    border: none;
+    padding-bottom: 13px;
+    border-bottom: 4px solid transparent;
+    margin: 0;
+    margin-bottom: -1px;
+    margin-right: 12px;
+    padding-right: 8px;
+}
+
+.tab button.active {
+    background-color: #ccc;
+}
+
+.agent-tab-title:hover {
+    color: var(--theme-primary-color);
+    border-color: var(--theme-primary-color);
+}
+
+.agent-tab-title.active {
+    color: var(--theme-primary-color);
+    border-color: var(--theme-primary-color);
+}
+
+.agent-tab-content .agent-tab {
+    display: none;
+}
+
+.agent-tab-content .agent-tab.active {
+    display: block;
+}
+
+.agent-inner.sidebar-left{
+    order: 1;
+}
+
+.agency-wrapper {
+    position: relative;
+}
+
+.user-name {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.user-description {
+    font-size: 18px;
+}
+
+.cover-photo {
+    height: 100%;
+    overflow: hidden;
+}
+
+.cover-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.agent-contact-information {
+    margin-top: 5%
+}
+
+.agency-view-grid-list.active{
+    color: black;
+}
+.card {
+    display: flex;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.thumbnail {
+    flex: 0 0 150px;
+}
+
+.thumbnail img {
+    width: 100%;
+    height: auto;
+}
+
+.agency-avatar img {
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+.single-agent-all-listing .button-wrap {
+    border-top: 1px solid #EFEFEF;
+    padding-top: 30px;
+    margin-top: 30px;
+}
+
+.single-agent-all-listing .button {
+    padding: 16px 28px;
+    background: var(--theme-primary-rgba);
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 150%;
+    color: var(--theme-primary-color);
+    display: inline-block;
+}
+
+.single-agent-all-listing .button i {
+    margin-left: 8px;
+    padding-left: 10px;
+    border-left: 1px solid #ffa92048;
+    vertical-align: middle;
+    font-size: 22px;
+}
+
+.single-agent-all-listing .button:hover {
+    background: #1C1C1E;
+    color: #fff;
+}
+
+.single-agent-element .agent-author,
+.single-agent-element .agent-description {
+    border-radius: 12px;
+    background: #FFF;
+    box-shadow: 0px 4px 18px 0px rgba(0, 0, 0, 0.08);
+    padding: 20px 20px 20px 20px;
+    margin-bottom: 30px;
+}
+
+.single-agent-element .agent-author .agent-avatar img {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+
+.single-agent-element .agent-author .agent-avatar {
+    margin-right: 30px;
+}
+
+.single-agent-element .agent-author .agent-title {
+    font-size: 22px;
+    text-transform: capitalize;
+    margin-bottom: 5px;
+}
+
+.single-agent-element .agent-author .agent-content-company {
+    margin-bottom: 21px;
+}
+
+.single-agent-element .agent-author .agent-company {
+    color: #8E8E93;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 150%; 
+}
+
+.single-agent-element .agent-author .agent-company b {
+    color: #1C1C1E;
+}
+
+.single-agent-element .agent-author .agent-content-phone .agent-title {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 150%;
+    color: var(--theme-primary-color);
+    font-family: 'Mulish';
+
+}
+
+.single-agent-element .agent-author .agent-content-phone,
+.single-agent-element .agent-author .agent-content-email {
+    margin-bottom: 6px;
+}
+
+.single-agent-element .agent-author .agent-content-phone i,
+.single-agent-element .agent-author .agent-content-email i,
+.single-agent-element .agent-author .agent-content-address i {
+    color: #8E8E93;
+    margin-right: 5px;
+}
+
+.single-agent-element .agent-author .agent-content-email .agent-title {
+    text-decoration-line: underline;
+    font-family: 'Mulish';
+}
+
+.single-agent-element .agent-author .agent-content-address .agent-title,
+.single-agent-element .agent-author .agent-content-email .agent-title {
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: none;
+}
+
+.single-agent-element .agent-author .agent-social {
+    border-top: 1px solid #EFEFEF;
+    padding-top: 16px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.single-agent-element .agent-author .agent-social .item {
+    width: 20px;
+    height: 20px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    margin-right: 18px;
+    margin-bottom: 10px;
+}
+
+.single-agent-element .agent-author .agent-social .item:last-child {
+    margin-right: 0;
+}
+
+.single-agent-element .agent-author .agent-social .item a {
+    color: #8E8E93;
+    font-size: 18px;
+}
+
+.single-agent-element .agent-author .agent-social .item a:hover {
+    color: var(--theme-primary-color);
+}
+
+.single-agent-element .agent-author {
+    display: flex;
+    align-items: center;
+}
+
+.list-item-agent {
+    margin-top: 30px;
+}
+
+.list-item-agent .infor-agent {
+    display: flex;
+    border-radius: 12px;
+    background: #FFF;
+    box-shadow: 0px 4px 18px 0px rgba(0, 0, 0, 0.08);
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.list-item-agent .infor-agent .agent-avatar img {
+    border-radius: 10px;
+}
+
+.list-item-agent .infor-agent .agent-avatar {
+    margin-right: 30px;
+}
+
+.list-item-agent .agent-title {
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.list-item-agent .agent-position {
+    color: #8E8E93;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 150%; 
+    margin-bottom: 21px;
+}
+
+.list-item-agent .agent-phone,
+.list-item-agent .agent-email {
+    color: #1C1C1E;
+    font-family: 'Mulish';
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 150%; 
+}
+
+.list-item-agent .agent-email {
+    text-decoration-line: underline;
+}
+
+.list-item-agent .agent-content-phone i ,
+.list-item-agent  .agent-content-email i {
+    font-size: 16px;
+    margin-right: 5px;
+}
+
+.list-item-agent .agent-content-phone {
+    margin-bottom: 6px;
+}
+
+.list-item-agent .agent-content-phone,
+.list-item-agent .agent-content-email {
+    display: flex;
+    align-items: center;
+}
+
+.list-item-agent .agent-social {
+    border-top: 1px solid #EFEFEF;
+    margin-top: 39px;
+    padding-top: 15px;
+}
+
+.list-item-agent .agent-wrapper.grid .inner {
+    border-radius: 10px;
+    background: #FFF;
+    box-shadow: 0px 4px 18px 0px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.list-item-agent .agent-wrapper.grid .agent-image img {
+    border-radius: unset;
+    height: 202px;
+    object-fit: cover;
+}
+
+.list-item-agent .agent-wrapper.grid .agent-content {
+    padding: 20px 20px 20px 20px;
+}
+
+.list-item-agent .agent-wrapper.grid .agent-social {
+    margin-top: 19px;
+    padding-top: 14px;
+    margin-bottom: -6px;
+}
+
+.list-item-agent .paging-navigation {
+    justify-content: center;
+}
+
+@media only screen and (max-width: 991px) {
+    .single-agent-element .agent-author {
+        display: block;
+    }
+    .single-agent-element .agent-author .agent-avatar {
+        margin-right: 0px;
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
+    .single-agent-element .agent-author .agent-avatar img {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .list-item-agent .infor-agent .agent-avatar img {
+        height: 100%;
+        object-fit: cover;
+    }
+    .single-agent-element .agent-author { 
+        display: block;
+    }
+    .single-agent-element .agent-author .agent-avatar {
+        margin-right: 0px;
+    }
+    .single-agent-element .agent-author .agent-content { 
+        padding-bottom: 0;
+    }
+    .single-agent-all-listing  {
+        margin-bottom: 80px;
+    }
+}
