@@ -1477,6 +1477,15 @@
       name="msapplication-TileImage"
       content="https://dreamhomewp.themesflat.com/wp-content/uploads/2024/03/cropped-cropped-favicon-1-1-1-2-270x270.png"
     />
+    <!-- Toast start -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+    <!-- Toast end -->
   </head>
 
   <body
@@ -1504,7 +1513,7 @@
                     <div class="header-ct-left">
                       <div id="logo" class="logo">
                         <a
-                          href="index.html"
+                          href="/"
                           title="DreamHome &#8211; Real Estate WordPress Theme"
                         >
                           <img
@@ -1524,7 +1533,7 @@
                                 id="menu-item-736"
                                 class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-736"
                               >
-                                <a href="index.html" aria-current="">Home</a>
+                                <a href="/" aria-current="">Home</a>
                               </li>
                               <li
                                 id="menu-item-1757"
@@ -1552,7 +1561,7 @@
                                 id="menu-item-1595"
                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1595"
                               >
-                                <a href="contact/index.html">Contact</a>
+                                <a href="/contact">Contact</a>
                               </li>
                             </ul>
                           </nav>
@@ -1588,7 +1597,7 @@
             <div class="inner-canvas-nav">
               <div class="group-header-logo">
                 <div id="logo-mobi" class="logo">
-                  <a href="../index.html" title="SM Reality Consultant">
+                  <a href="/" title="SM Reality Consultant">
                     <img
                       class="site-logo"
                       src="wp-content/themes/dreamhome/images/logo.png"
@@ -1607,7 +1616,7 @@
                     <li
                       class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-1757"
                     >
-                      <a href="index.html">Home</a>
+                      <a href="/">Home</a>
                     </li>
                     <li
                       class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-737"
@@ -1629,7 +1638,7 @@
                     <li
                       class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-740"
                     >
-                      <a href="contact/index.html">Contact</a>
+                      <a href="/contact">Contact</a>
                     </li>
                   </ul>
                 </nav>
@@ -2831,7 +2840,7 @@
                             id="menu-item-244"
                             class="menu-item menu-item-type-custom menu-item-object-custom menu-item-244"
                           >
-                            <a href="contact/index.html">Contact Us</a>
+                            <a href="/contact">Contact Us</a>
                           </li>
                           <li
                             id="menu-item-239"
@@ -3641,5 +3650,26 @@
       src="wp-content/plugins/elementor/assets/js/frontend.min3cad.js?ver=3.21.8"
       id="elementor-frontend-js"
     ></script>
+    <script>
+      // Check if the URL has a query parameter or hash fragment
+      const urlParams = new URLSearchParams(window.location.search);
+      const toastParam =
+        urlParams.get("toast") || window.location.hash.slice(1).split("=")[1];
+
+      // Display the toast notification if the parameter is present
+      if (toastParam === "contact_success") {
+        toastr.success("Contact form submitted successfully!", "Success", {
+          closeButton: true,
+          positionClass: "toast-bottom-right",
+        });
+      }
+    </script>
+    <style>
+      /* Toast css start*/
+      .toast-success {
+        background-color: #2c892f; /* Green */
+      }
+      /* Toast css end */
+    </style>
   </body>
 </html>

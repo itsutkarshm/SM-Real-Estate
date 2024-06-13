@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dashboard</title>
+  </head>
+  <body>
+    <h1>Dashboard</h1>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Message</th>
+      </tr>
+      <% submissions.forEach(submission => { %>
+      <tr>
+        <td><%= submission.name %></td>
+        <td><%= submission.email %></td>
+        <td><%= submission.phone %></td>
+        <td><%= submission.message %></td>
+      </tr>
+      <% }) %>
+    </table>
+  </body>
+</html>
