@@ -20,7 +20,7 @@ async function main() {
     })
     console.log(chalk.green('Default user created'))
   } else {
-    console.log(chalk.red('Default user already exists'))
+    console.log(chalk.yellow('Default user already exists'))
   }
 }
 
