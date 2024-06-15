@@ -32,6 +32,32 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'app', 'index.html'));
 });
 
+// About Route
+app.get('/about', (req, res) => {
+  res.sendFile(path.join(__dirname, 'app', 'about' , 'index.html'));
+});
+
+// T&C route
+app.get('/terms-and-conditions', (req, res) => {
+  res.sendFile(path.join(__dirname, 'app', 'terms-and-conditions' , 'index.html'));
+});
+
+// Oro Constella Route
+app.get('/properties/oro-constella ', (req, res) => {
+  console.log(path.join(__dirname, 'app', 'properties' , 'Oro-Constella' , 'index.html'))
+  res.sendFile(path.join(__dirname, 'app', 'properties' , 'Oro-Constella' , 'index.html'));
+});
+
+// Rishita Mulberry
+app.get('/properties/rishita-mulberry', (req, res) => {
+  res.sendFile(path.join(__dirname, 'app', "properties" , 'Rishita-Mulberry' , 'index.html'));
+});
+
+//Privacy Policy route
+app.get('/privacy-policy', (req, res) => {
+  res.sendFile(path.join(__dirname, 'app', 'privacy-policy-2' , 'index.html'));
+});
+
 // Contact form route
 app.get('/contact', (req, res) => {
   console.log(path.join(__dirname, 'app', 'contact', 'index.html'));
