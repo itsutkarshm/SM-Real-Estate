@@ -44,7 +44,6 @@ app.get('/terms-and-conditions', (req, res) => {
 
 // Oro Constella Route
 app.get('/properties/oro-constella ', (req, res) => {
-  console.log(path.join(__dirname, 'app', 'properties' , 'Oro-Constella' , 'index.html'))
   res.sendFile(path.join(__dirname, 'app', 'properties' , 'Oro-Constella' , 'index.html'));
 });
 
@@ -60,13 +59,11 @@ app.get('/privacy-policy', (req, res) => {
 
 // Contact form route
 app.get('/contact', (req, res) => {
-  console.log(path.join(__dirname, 'app', 'contact', 'index.html'));
   res.sendFile(path.join(__dirname, 'app', 'contact', 'index.html'));
 });
 
 app.post('/contact', async (req, res) => {
   const { name, email, phone, message } = req.body;
-  console.log(req.body);
   try {
     await prisma.submission.create({
       data: {
@@ -89,13 +86,12 @@ app.get('/admin', (req, res) => {
   res.render('login', { message: req.flash('message') });
 });
 
-app.post('/admin', async (req, res) => {
-  const { username, password } = req.body;
-
+app.post('/login', async (req, res) => {
+  const { email, password } = req.body;
   try {
     const foundUser = await prisma.user.findUnique({
       where: {
-        username: username,
+        email: email,
       },
     });
 

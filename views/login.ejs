@@ -1883,21 +1883,15 @@
               <div class="tfre_login-form" id="tfre_login_section">
                 <div class="error_message tfre_message"></div>
                 <h2>Login:</h2>
-                <form
-                  class="tfre_login"
-                  action="/login"
-                  method="post"
-                  enctype="multipart/form-data"
-                  id="tfre_custom-login-form"
-                >
+                <form action="/login" method="post">
                   <div class="container">
                     <div class="form-group">
-                      <label for="username">Username:</label>
+                      <label for="email">Email:</label>
                       <input
                         type="text"
-                        name="username"
-                        placeholder="Email or user name"
-                        id="username"
+                        name="email"
+                        placeholder="Your Email"
+                        id="email"
                         required
                       />
                     </div>
@@ -1924,162 +1918,12 @@
                         </div>
                       </div>
                     </div>
-                    <div>
-                      <a
-                        href="javascript:void(0)"
-                        class="tfre-reset-password"
-                        id="tfre-reset-password"
-                        >Lost password</a
-                      >
-                    </div>
 
                     <div class="form-group">
                       <button type="submit">Login</button>
                     </div>
                   </div>
-                  <div
-                    class="container tfre_register"
-                    id="tfre_register_redirect"
-                  >
-                    <p>
-                      Don&#039;t you have an account?
-                      <a href="/register" class="tfre_register_button"
-                        >Register</a
-                      >.
-                    </p>
-                  </div>
                 </form>
-              </div>
-              <div id="tfre-reset-password-section" style="display: none">
-                <div class="tfre-resset-password container">
-                  <div
-                    class="tfre_messages message tfre_messages_reset_password"
-                  ></div>
-                  <form method="post" enctype="multipart/form-data">
-                    <h4>Forgot your password?</h4>
-                    <ul class="client-account">
-                      <li>Username: <span>agent</span></li>
-                      <li>Password: <span>demo</span></li>
-                    </ul>
-                    <div class="form-group control-username">
-                      <input
-                        name="user_login"
-                        class="form-control control-icon reset_password_user_login"
-                        placeholder="Enter your username or email"
-                      />
-                      <input
-                        type="hidden"
-                        name="tfre_security_reset_password"
-                        value="2644506ab4"
-                      />
-                      <input
-                        type="hidden"
-                        name="action"
-                        value="tfre_reset_password_ajax"
-                      />
-                      <button type="submit" class="tfre_forgetpass">
-                        Get new password
-                      </button>
-                    </div>
-                  </form>
-                </div>
-                <a href="javascript:void(0)" class="tfre_login_redirect"
-                  >Back to Login</a
-                >
-              </div>
-              <div id="tfre_register_section" style="display: none">
-                <div class="tfre_registration-form">
-                  <div class="error_message tfre_message"></div>
-                  <h2>Register:</h2>
-                  <form
-                    class="tfre_register"
-                    method="post"
-                    enctype="multipart/form-data"
-                    id="tfre_custom-register-form"
-                  >
-                    <div class="container">
-                      <div class="form-group">
-                        <label>User Name:</label>
-                        <input
-                          type="text"
-                          name="username"
-                          placeholder="User name"
-                          required
-                        />
-                      </div>
-                      <div class="form-group">
-                        <label for="email">Email:</label>
-                        <input
-                          type="email"
-                          name="email"
-                          id="email"
-                          placeholder="Email"
-                          required
-                        />
-                      </div>
-                      <div class="form-group">
-                        <label>Password:</label>
-                        <div class="input-group show_hide_password">
-                          <input
-                            type="password"
-                            name="password"
-                            class="password"
-                            placeholder="Your passsword"
-                            required
-                          />
-                          <div class="input-group-addon">
-                            <i
-                              class="far fa-eye-slash togglepassword register"
-                              style="
-                                margin-top: 20px;
-                                margin-left: -30px;
-                                cursor: pointer;
-                              "
-                            ></i>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label for="confirm_password">Confirm Password:</label>
-                        <div
-                          class="input-group"
-                          id="show_hide_confirm_password"
-                        >
-                          <input
-                            type="password"
-                            name="confirm_password"
-                            id="confirm_password"
-                            placeholder="Confirm password"
-                            required
-                          />
-                          <div class="input-group-addon">
-                            <i
-                              class="far fa-eye-slash confirmpassword"
-                              id="toggleConfirmPassword"
-                              style="
-                                margin-top: 20px;
-                                margin-left: -30px;
-                                cursor: pointer;
-                              "
-                            ></i>
-                          </div>
-                        </div>
-                      </div>
-                      <button type="submit">Sign Up</button>
-                    </div>
-                    <div
-                      class="container tfre_signin tfre_login_redirect"
-                      id="tfre_login_redirect"
-                    >
-                      <p>
-                        Already have an account?
-                        <a href="#" class="tfre_login_redirect_button"
-                          >Sign in</a
-                        >.
-                      </p>
-                    </div>
-                  </form>
-                </div>
               </div>
             </div>
           </div>
@@ -2300,5 +2144,22 @@
       src="../wp-content/themes/dreamhome/js/main1c12.js?ver=2.0.4"
       id="themesflat-main-js"
     ></script>
+    <script>
+      // Optional JavaScript to toggle password visibility
+      document.querySelectorAll(".togglepassword").forEach(function (element) {
+        element.addEventListener("click", function () {
+          let passwordField = this.previousElementSibling;
+          if (passwordField.type === "password") {
+            passwordField.type = "text";
+            this.classList.remove("fa-eye-slash");
+            this.classList.add("fa-eye");
+          } else {
+            passwordField.type = "password";
+            this.classList.remove("fa-eye");
+            this.classList.add("fa-eye-slash");
+          }
+        });
+      });
+    </script>
   </body>
 </html>
