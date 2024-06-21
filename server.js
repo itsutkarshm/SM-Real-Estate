@@ -47,9 +47,19 @@ app.get('/properties/oro-constella ', (req, res) => {
   res.sendFile(path.join(__dirname, 'app', 'properties' , 'Oro-Constella' , 'index.html'));
 });
 
-// Rishita Mulberry
-app.get('/properties/rishita-mulberry', (req, res) => {
-  res.sendFile(path.join(__dirname, 'app', "properties" , 'Rishita-Mulberry' , 'index.html'));
+// Mulberry
+app.get('/properties/mulberry-heights', (req, res) => {
+  res.sendFile(path.join(__dirname, 'app', "properties" , 'Mulberry-Heights' , 'index.html'));
+});
+
+// Manhattan
+app.get('/properties/manhattan', (req, res) => {
+  res.sendFile(path.join(__dirname, 'app', "properties" , 'Manhattan' , 'index.html'));
+});
+
+// Serenity
+app.get('/properties/serenity', (req, res) => {
+  res.sendFile(path.join(__dirname, 'app', "properties" , 'Serenity' , 'index.html'));
 });
 
 //Privacy Policy route
