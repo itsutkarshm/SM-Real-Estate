@@ -149,6 +149,18 @@ app.post('/register', async (req, res) => {
   }
 });
 
+// Logout route
+app.get('/logout', (req, res) => {
+  req.session.destroy((err) => {
+    if (err) {
+      console.log(err);
+      res.status(500).send('Error logging out');
+    } else {
+      res.redirect('/admin');
+    }
+  });
+});
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log('Server is running on port 3000');
