@@ -105,11 +105,13 @@ app.post('/login', async (req, res) => {
         res.redirect('/admin');
       }
     } else {
-      req.flash('message', 'No user found with that username');
+      req.flash('message', 'No user found with that email');
       res.redirect('/admin');
     }
   } catch (err) {
     console.log(err);
+    req.flash('message', 'An error occurred during login');
+    res.redirect('/admin');
   }
 });
 
