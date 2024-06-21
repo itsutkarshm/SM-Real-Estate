@@ -1439,56 +1439,13 @@
     <div class="dashboard-overlay"></div>
     <aside class="sidebar-dashboard">
       <div class="db-content db-logo pad-30">
-        <a
-          href="../index.html"
-          title="DreamHome &#8211; Real Estate WordPress Theme"
-        >
+        <a href="/admin" title="SM Realty Logo">
           <img
             class="site-logo"
             src="../wp-content/themes/dreamhome/images/logo-db.png"
-            alt="DreamHome &#8211; Real Estate WordPress Theme"
+            alt="SM Realty Logo"
           />
         </a>
-      </div>
-      <div class="db-content db-list-menu">
-        <h6 class="db-title pad-30">Menu</h6>
-        <div class="db-dashboard-menu">
-          <ul>
-            <li>
-              <a href="index.html" class="menu-index-1">
-                <i class="fas fa-tachometer-alt"></i>Dashboards <span></span>
-              </a>
-            </li>
-            <li>
-              <a href="../my-properties/index.html" class="menu-index-2">
-                <i class="fas fa-list-alt"></i>My Properties <span></span>
-              </a>
-            </li>
-            <li>
-              <a href="../my-invoice/index.html" class="menu-index-3">
-                <i class="fas fa-file-invoice"></i>My Invoices <span></span>
-              </a>
-            </li>
-            <li>
-              <a href="../my-package/index.html" class="menu-index-4">
-                <i class="fas fa-box"></i>My Package <span></span>
-              </a>
-            </li>
-            <li>
-              <a href="../my-profile/index.html" class="menu-index-8">
-                <i class="fas fa-user"></i>My Profile <span></span>
-              </a>
-            </li>
-            <li>
-              <a
-                href="index.html?action=logout&amp;redirect_to=https%3A%2F%2Fdreamhomewp.themesflat.com%2Fdashboard%2F&amp;_wpnonce=ceea1449b7"
-                class="menu-index-9"
-              >
-                <i class="fas fa-sign-out-alt"></i>Logout <span></span>
-              </a>
-            </li>
-          </ul>
-        </div>
       </div>
     </aside>
 
@@ -1502,20 +1459,14 @@
                   <div class="header-wrap clearfix">
                     <div class="header-ct-left">
                       <div id="logo" class="logo">
-                        <a
-                          href="../index.html"
-                          title="DreamHome &#8211; Real Estate WordPress Theme"
-                        >
+                        <a href="/admin" title="SM Realty Logo">
                           <img
                             class="site-logo"
                             src="../wp-content/themes/dreamhome/images/logo.png"
-                            alt="DreamHome &#8211; Real Estate WordPress Theme"
+                            alt="SM Realty Logo"
                           />
                         </a>
                       </div>
-                    </div>
-                    <div class="btn-menu">
-                      <span class="line-1"></span>
                     </div>
                     <!-- //mobile menu button -->
                   </div>
@@ -1534,25 +1485,13 @@
             <div class="inner-canvas-nav">
               <div class="group-header-logo">
                 <div id="logo-mobi" class="logo">
-                  <a
-                    href="../index.html"
-                    title="DreamHome &#8211; Real Estate WordPress Theme"
-                  >
+                  <a href="/admin" title="SM Realty Logo">
                     <img
                       class="site-logo"
                       src="../wp-content/themes/dreamhome/images/logo.png"
-                      alt="DreamHome &#8211; Real Estate WordPress Theme"
+                      alt="SM Realty Logo"
                     />
                   </a>
-                </div>
-              </div>
-
-              <div class="bottom-canvas-nav">
-                <!-- #mainnav_canvas -->
-                <div class="wrap-btn-mobile">
-                  <a href="" class="tf-btn display-pop-login"
-                    >Logout<span></span
-                  ></a>
                 </div>
               </div>
             </div>
@@ -1562,9 +1501,6 @@
         <!-- /.header -->
       </div>
       <div id="main-content" class="site-main clearfix">
-        <div class="dashboard-toggle">
-          <i class="icon-dreamhome-list"></i> Show DashBoard
-        </div>
         <div id="themesflat-content" class="page-wrap">
           <div class="container">
             <div class="row">
@@ -1584,17 +1520,17 @@
                               </p>
                             </div>
                             <button
-                              title="Login Or Register"
+                              title="Login"
                               type="button"
                               class="button"
                               data-toggle="modal"
                               data-target="#tfre_login_register_modal"
                             >
-                              Login Or Register
+                              Login
                             </button>
                             <a
                               class="button-outline"
-                              href="../index.html"
+                              href="/"
                               title="Back To Home"
                               >Home Page</a
                             >
@@ -1881,7 +1817,12 @@
                 <span aria-hidden="true">&times;</span>
               </button>
               <div class="tfre_login-form" id="tfre_login_section">
-                <div class="error_message tfre_message"></div>
+                <div class="error_message tfre_message">
+                  <% if (message.length > 0) { %>
+                  <div class="alert alert-danger"><%= message %></div>
+                  <input type="hidden" id="loginError" value="true" />
+                  <% } %>
+                </div>
                 <h2>Login:</h2>
                 <form action="/login" method="post">
                   <div class="container">
@@ -2159,6 +2100,17 @@
             this.classList.add("fa-eye-slash");
           }
         });
+      });
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        if (document.getElementById("loginError")) {
+          var modal = new bootstrap.Modal(
+            document.getElementById("tfre_login_register_modal")
+          );
+          modal.show();
+        }
       });
     </script>
   </body>
