@@ -1837,20 +1837,22 @@
       id="themesflat-main-js"
     ></script>
     <script>
-      // Optional JavaScript to toggle password visibility
-      document.querySelectorAll(".togglepassword").forEach(function (element) {
-        element.addEventListener("click", function () {
-          let passwordField = this.previousElementSibling;
-          if (passwordField.type === "password") {
-            passwordField.type = "text";
-            this.classList.remove("fa-eye-slash");
-            this.classList.add("fa-eye");
-          } else {
-            passwordField.type = "password";
-            this.classList.remove("fa-eye");
-            this.classList.add("fa-eye-slash");
-          }
-        });
+      // Get the password input field and the toggle button
+      const passwordInput = document.querySelector(".password");
+      const toggleButton = document.querySelector(".togglepassword");
+
+      // Add an event listener to the toggle button
+      toggleButton.addEventListener("click", function () {
+        // Toggle the password visibility
+        const passwordType =
+          passwordInput.getAttribute("type") === "password"
+            ? "text"
+            : "password";
+        passwordInput.setAttribute("type", passwordType);
+
+        // Toggle the eye icon class
+        this.classList.toggle("fa-eye-slash");
+        this.classList.toggle("fa-eye");
       });
     </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
