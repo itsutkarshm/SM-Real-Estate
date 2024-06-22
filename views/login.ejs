@@ -1421,14 +1421,11 @@
     <div class="dashboard-overlay"></div>
     <aside class="sidebar-dashboard">
       <div class="db-content db-logo pad-30">
-        <a
-          href="../index.html"
-          title="DreamHome &#8211; Real Estate WordPress Theme"
-        >
+        <a href="/admin" title="SM Realty Logo">
           <img
             class="site-logo"
             src="../wp-content/themes/dreamhome/images/logo-db.png"
-            alt="DreamHome &#8211; Real Estate WordPress Theme"
+            alt="SM Realty Logo"
           />
         </a>
       </div>
@@ -1444,20 +1441,14 @@
                   <div class="header-wrap clearfix">
                     <div class="header-ct-left">
                       <div id="logo" class="logo">
-                        <a
-                          href="../index.html"
-                          title="SM &#8211; Realty Consultant"
-                        >
+                        <a href="/admin" title="SM Realty Logo">
                           <img
                             class="site-logo"
                             src="../wp-content/themes/dreamhome/images/logo.png"
-                            alt="SM &#8211; Realty Consultant"
+                            alt="SM Realty Logo"
                           />
                         </a>
                       </div>
-                    </div>
-                    <div class="btn-menu">
-                      <span class="line-1"></span>
                     </div>
                     <!-- //mobile menu button -->
                   </div>
@@ -1476,11 +1467,11 @@
             <div class="inner-canvas-nav">
               <div class="group-header-logo">
                 <div id="logo-mobi" class="logo">
-                  <a href="../index.html" title="SM &#8211; Realty Consultant">
+                  <a href="/admin" title="SM Realty Logo">
                     <img
                       class="site-logo"
                       src="../wp-content/themes/dreamhome/images/logo.png"
-                      alt="SM &#8211; Realty Consultant"
+                      alt="SM Realty Logo"
                     />
                   </a>
                 </div>
@@ -1511,17 +1502,17 @@
                               </p>
                             </div>
                             <button
-                              title="Login Or Register"
+                              title="Login"
                               type="button"
                               class="button"
                               data-toggle="modal"
                               data-target="#tfre_login_register_modal"
                             >
-                              Login Or Register
+                              Login
                             </button>
                             <a
                               class="button-outline"
-                              href="../index.html"
+                              href="/"
                               title="Back To Home"
                               >Home Page</a
                             >
@@ -1577,7 +1568,12 @@
                 <span aria-hidden="true">&times;</span>
               </button>
               <div class="tfre_login-form" id="tfre_login_section">
-                <div class="error_message tfre_message"></div>
+                <div class="error_message tfre_message">
+                  <% if (message.length > 0) { %>
+                  <div class="alert alert-danger"><%= message %></div>
+                  <input type="hidden" id="loginError" value="true" />
+                  <% } %>
+                </div>
                 <h2>Login:</h2>
                 <form action="/login" method="post">
                   <div class="container">
@@ -1841,17 +1837,31 @@
       id="themesflat-main-js"
     ></script>
     <script>
-      const passwordInput = document.querySelector(".password");
-      const toggleButton = document.querySelector(".togglepassword");
-
-      toggleButton.addEventListener("click", function () {
-        const passwordType =
-          passwordInput.getAttribute("type") === "password"
-            ? "text"
-            : "password";
-        passwordInput.setAttribute("type", passwordType);
-        this.classList.toggle("fa-eye-slash");
-        this.classList.toggle("fa-eye");
+      // Optional JavaScript to toggle password visibility
+      document.querySelectorAll(".togglepassword").forEach(function (element) {
+        element.addEventListener("click", function () {
+          let passwordField = this.previousElementSibling;
+          if (passwordField.type === "password") {
+            passwordField.type = "text";
+            this.classList.remove("fa-eye-slash");
+            this.classList.add("fa-eye");
+          } else {
+            passwordField.type = "password";
+            this.classList.remove("fa-eye");
+            this.classList.add("fa-eye-slash");
+          }
+        });
+      });
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        if (document.getElementById("loginError")) {
+          var modal = new bootstrap.Modal(
+            document.getElementById("tfre_login_register_modal")
+          );
+          modal.show();
+        }
       });
     </script>
   </body>

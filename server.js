@@ -115,11 +115,13 @@ app.post('/login', async (req, res) => {
         res.redirect('/admin');
       }
     } else {
-      req.flash('message', 'No user found with that username');
+      req.flash('message', 'No user found with that email');
       res.redirect('/admin');
     }
   } catch (err) {
     console.log(err);
+    req.flash('message', 'An error occurred during login');
+    res.redirect('/admin');
   }
 });
 
@@ -157,6 +159,18 @@ app.post('/register', async (req, res) => {
   } catch (err) {
     console.log(err);
   }
+});
+
+// Logout route
+app.get('/logout', (req, res) => {
+  req.session.destroy((err) => {
+    if (err) {
+      console.log(err);
+      res.status(500).send('Error logging out');
+    } else {
+      res.redirect('/admin');
+    }
+  });
 });
 
 const PORT = process.env.PORT || 3000;
