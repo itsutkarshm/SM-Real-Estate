@@ -88,7 +88,6 @@ app.post('/contact', async (req, res) => {
         message,
       },
     });
-    console.log('done');
     res.redirect('/#toast=contact_success');
   } catch (err) {
     console.log(err);
