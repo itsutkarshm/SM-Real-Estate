@@ -2369,87 +2369,63 @@
                                     <ul></ul>
                                   </div>
                                   <form
-                                    action="https://dreamhomewp.themesflat.com/new-propety/195-houston-avill/#wpcf7-f4060-p3564-o1"
+                                    action="/contact"
                                     method="post"
-                                    class="wpcf7-form init"
-                                    aria-label="Contact form"
-                                    novalidate="novalidate"
-                                    data-status="init"
+                                    class="wpcf7-form"
                                   >
-                                    <div style="display: none">
-                                      <input
-                                        type="hidden"
-                                        name="_wpcf7"
-                                        value="4060"
-                                      />
-                                      <input
-                                        type="hidden"
-                                        name="_wpcf7_version"
-                                        value="5.9.5"
-                                      />
-                                      <input
-                                        type="hidden"
-                                        name="_wpcf7_locale"
-                                        value="en_US"
-                                      />
-                                      <input
-                                        type="hidden"
-                                        name="_wpcf7_unit_tag"
-                                        value="wpcf7-f4060-p3564-o1"
-                                      />
-                                      <input
-                                        type="hidden"
-                                        name="_wpcf7_container_post"
-                                        value="3564"
-                                      />
-                                      <input
-                                        type="hidden"
-                                        name="_wpcf7_posted_data_hash"
-                                        value=""
-                                      />
-                                    </div>
+                                    <span
+                                      id="phoneError"
+                                      style="color: red"
+                                    ></span>
                                     <div class="contact-seller">
                                       <input
                                         size="40"
-                                        class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
+                                        class="wpcf7-form-control wpcf7-text"
                                         aria-required="true"
                                         aria-invalid="false"
                                         placeholder="Full name *"
                                         value=""
                                         type="text"
-                                        name="your-name"
+                                        name="name"
+                                        id="name"
                                       />
                                       <input
                                         size="40"
-                                        class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
+                                        class="wpcf7-form-control wpcf7-text"
                                         aria-required="true"
                                         aria-invalid="false"
                                         placeholder="Phone number *"
                                         value=""
                                         type="text"
-                                        name="your-phone"
+                                        name="phone"
+                                        id="phone"
                                       />
+
                                       <input
                                         size="40"
-                                        class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email"
+                                        class="wpcf7-form-control wpcf7-email wpcf7-text"
                                         aria-required="true"
                                         aria-invalid="false"
                                         placeholder="Email address*"
                                         value=""
                                         type="email"
-                                        name="your-email"
+                                        name="email"
+                                        id="email"
                                       />
                                       <textarea
                                         cols="40"
                                         rows="10"
                                         class="wpcf7-form-control wpcf7-textarea"
                                         aria-invalid="false"
-                                        placeholder="Your mesage *"
-                                        name="your-message"
+                                        placeholder="Your mesage"
+                                        name="message"
                                       ></textarea>
                                       <div class="group-btn">
                                         <div class="inner">
-                                          <button type="submit">
+                                          <button
+                                            type="submit"
+                                            id="submit-form"
+                                          >
                                             Send message
                                             <i class="icon-dreamhome-mail2"></i>
                                           </button>
