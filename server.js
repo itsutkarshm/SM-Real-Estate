@@ -62,6 +62,11 @@ app.get('/properties/serenity', (req, res) => {
   res.sendFile(path.join(__dirname, 'app', "properties" , 'Serenity' , 'index.html'));
 });
 
+// Nottingham Homes
+app.get('/properties/nottingham', (req, res) => {
+  res.sendFile(path.join(__dirname, 'app', "properties" , 'Nottingham Homes' , 'index.html'));
+});
+
 //Privacy Policy route
 app.get('/privacy-policy', (req, res) => {
   res.sendFile(path.join(__dirname, 'app', 'privacy-policy-2' , 'index.html'));
